@@ -8,9 +8,9 @@ namespace WIF.PropertySerialization.ContractResolvers
 {
     public class SpecificPropertiesContractResolver : DefaultContractResolver
     {
-        public SpecificPropertiesContractResolver(List<ISerializerPropertyDeclaration> declarations)
+        public SpecificPropertiesContractResolver(List<ISerializerPropertiesDeclaration> declarations)
         {
-            var allDeclarations = declarations ?? new List<ISerializerPropertyDeclaration>();
+            var allDeclarations = declarations ?? new List<ISerializerPropertiesDeclaration>();
             
             foreach (var declaration in allDeclarations)
             {
@@ -26,7 +26,7 @@ namespace WIF.PropertySerialization.ContractResolvers
         /// <summary>
         /// This will store a list of the properties which are to be serialized
         /// </summary>
-        private readonly Dictionary<Type, ISerializerPropertyDeclaration> propertyDeclarations = new Dictionary<Type, ISerializerPropertyDeclaration>();
+        private readonly Dictionary<Type, ISerializerPropertiesDeclaration> propertyDeclarations = new Dictionary<Type, ISerializerPropertiesDeclaration>();
 
         /// <summary>
         /// This will be used to serialize the property names only

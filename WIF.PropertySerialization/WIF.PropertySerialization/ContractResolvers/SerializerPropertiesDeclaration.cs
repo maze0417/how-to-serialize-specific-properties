@@ -11,9 +11,9 @@ namespace WIF.PropertySerialization.ContractResolvers
     /// <typeparam name="T">
     /// The class type for which properties are declared
     /// </typeparam>
-    public class SerializerPropertyDeclaration<T> : ISerializerPropertyDeclaration
+    public class SerializerPropertiesDeclaration<T> : ISerializerPropertiesDeclaration
     {
-        public SerializerPropertyDeclaration(params string[] properties)
+        public SerializerPropertiesDeclaration(params string[] properties)
         {
             this.RegisterProperties(properties);
         }
